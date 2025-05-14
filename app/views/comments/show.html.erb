@@ -1,0 +1,10 @@
+<h1>Comment</h1>
+<div class="card">
+  <div class="card-body">
+    <p class="card-text"><%= @comment.content %></p>
+    <p class="card-text">
+      <strong>User:</strong> <%= link_to @comment.user.username, user_path(@comment.user) %> | 
+      <strong>Post:</strong> <%= link_to "Post", post_path(@comment.post) %>
+    </p>
+  </div>
+</div>

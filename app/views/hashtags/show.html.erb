@@ -1,0 +1,7 @@
+<h1>Hashtag: <%= @hashtag.name %></h1>
+<h2>Posts:</h2>
+<% @hashtag.posts.each do |post| %>
+  <div>
+    <%= link_to "Post", post_path(post) %> - <%= post.description %>
+  </div>
+<% end %>

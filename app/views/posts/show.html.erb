@@ -1,0 +1,14 @@
+<h1>Post</h1>
+<p> Description: <%= @post.description %></p>
+<p> Image Path: <%= @post.image_path %></p>
+<p> Posted by: <%= link_to @post.user.username, user_path(@post.user) %> </p>
+
+<h2>Comments:</h2>
+ <% @post.comments.each do |comment| %>
+   <div class = "card mb-3">
+    <div class = "card-body">
+     <p class = "card-text"> <%= comment.content %> </p>
+     <p class = "card-text"> Comment by: <%= link_to comment.user.username, user_path(comment.user) %> </p>
+    </div>
+   </div>
+ <% end %>
